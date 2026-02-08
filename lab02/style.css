@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  display: flex;
+  background: linear-gradient(120deg, #faf5ff, #eef2ff);
+  color: #1e1b4b;
+}
+
+/* SIDE STRIP */
+.side-strip {
+  width: 100px;
+  background: linear-gradient(180deg, #6d28d9, #4338ca);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+.brand span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* CONTENT */
+.content {
+  padding: 70px;
+  max-width: 950px;
+}
+
+/* SECTION TAG */
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #6d28d9;
+}
+
+/* INTRO */
+.intro h2 {
+  font-size: 3rem;
+  margin-top: 8px;
+}
+
+.tagline {
+  margin: 12px 0 24px;
+  color: #6d28d9;
+  font-weight: 500;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 70px;
+}
+
+h3 {
+  font-size: 1.7rem;
+  margin: 12px 0 18px;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, #c7d2fe, transparent);
+  margin: 60px 0;
+}
+
+/* SKILLS */
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pill-container span {
+  padding: 9px 18px;
+  background: rgba(109, 40, 217, 0.15);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* FOCUS BOX */
+.focus-box {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+/* TIMELINE */
+.timeline {
+  border-left: 2px solid #c7d2fe;
+  padding-left: 24px;
+}
+
+.timeline-item {
+  margin-bottom: 28px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.timeline-item h4 {
+  margin-bottom: 8px;
+}
+
+/* TAGS */
+.tags {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  background: #ede9fe;
+  border-radius: 999px;
+}
+
+/* FOOTER */
+.footer {
+  font-size: 0.9rem;
+  color: #4338ca;
+}
+
+/* ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .side-strip {
+    width: 100%;
+    height: 70px;
+  }
+
+  .content {
+    padding: 40px 24px;
+  }
+}

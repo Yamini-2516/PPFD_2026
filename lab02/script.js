@@ -1,28 +1,14 @@
-// Auto fetch GPS location
-navigator.geolocation.getCurrentPosition(
-    position => {
-        document.getElementById("location").value =
-            position.coords.latitude + ", " + position.coords.longitude;
-    },
-    () => {
-        document.getElementById("location").value = "Location unavailable";
-    }
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.2 }
 );
 
-function sendSOS() {
-    let name = document.getElementById("name").value;
-    let location = document.getElementById("location").value;
-
-    if (name === "") {
-        alert("Please enter your name");
-        return;
-    }
-
-    fetch("/send_sos", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, location })
-    })
-    .then(res => res.json())
-    .then(data => alert(data.message));
-}
+reveals.forEach(el => observer.observe(el));
