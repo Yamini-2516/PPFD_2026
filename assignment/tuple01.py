@@ -1,0 +1,6 @@
+a = (1,45,342,3424,False, 45,"yamini", 1.2)
+print(a)
+no=a.count(45)
+print(no)
+index=a.index(3424)
+print(index)
